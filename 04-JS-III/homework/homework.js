@@ -158,12 +158,14 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  num = n.toString()
-  num1=num.split ("")
-  if( num1[0] === "9") return true
-  return false 
+  num = String(n)
+  num1= Array.from (num)
+  if (num1[0] === "9") return true
+
+  return false
   
 }
+
 
 
 function todosIguales(arreglo) {
@@ -203,14 +205,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-  var nuevoarray = []
-  
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] > 100) {
-     nuevoarray.push(array[i])
+  var newarray = []
+  for(let i = 0; i < array.length; i++){
+    if(array[i] > 100){
+      newarray.push(array[i])
     }
   }
-  return nuevoarray
+  return newarray
 }
 
 
